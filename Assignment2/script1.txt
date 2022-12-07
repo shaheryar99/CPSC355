@@ -1,0 +1,155 @@
+Script started on 2022-10-06 22:38:38-06:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;shaheryar.syed@csa1:~/Documents/Assignment2 [?2004hshaheryar.syed@csa1:~/Documents/Assignment2$ gdb assign2a-t
+[?2004l
+[35;1mGNU gdb (GDB) Fedora 12.1-1.fc36[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32massign2a-t[m...
+[?2004h
+This GDB supports auto-downloading debuginfo from the following URLs:
+https://debuginfod.fedoraproject.org/ 
+Enable debuginfod for this session? (y or [n]) y
+[?2004l
+Debuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+(No debugging symbols found in [32massign2a-t[m)
+    [?2004h(gdb) b *step_1
+    [?2004l
+    Breakpoint 1 at [34m0x4006c8[m
+    [?2004h(gdb) b *step_2
+    [?2004l
+    Breakpoint 2 at [34m0x4006dc[m
+    [?2004h(gdb) b *step_3
+    [?2004l
+    Breakpoint 3 at [34m0x4006f0[m
+    [?2004h(gdb) b*[K *step [K_4
+    [?2004l
+    Breakpoint 4 at [34m0x400704[m
+    [?2004h(gdb) n[Kb *exit
+    [?2004l
+    Breakpoint 5 at [34m0x40073c[m
+    [?2004h(gdb) r
+    [?2004l
+Starting program: [32m/home/ugc/shaheryar.syed/Documents/Assignment2/assign2a-t[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib64/libthread_db.so.1[m".
+
+Breakpoint 1, [34m0x00000000004006c8[m in [33mstep_1[m ()
+[?2004h[?2004l
+    [?2004h(gdb) p/a $w19
+    [?2004l
+    $1 = [34m0x7fc07fc[m
+    [?2004h(gdb) p/a $w20
+    [?2004l
+    $2 = [34m0x1[m
+    [?2004h(gdb) p/a $w21
+    [?2004l
+    $3 = [34m0x41fdf0[m
+    [?2004h(gdb) p/a $2[Kw22
+    [?2004l
+    $4 = [34m0x4005b4[m <[33m_start[m+52>
+[?2004h(gdb) c
+[?2004l
+Continuing.
+
+Breakpoint 2, [34m0x00000000004006dc[m in [33mstep_2[m ()
+[?2004h[?2004l
+    [?2004h(gdb) p/a $w20
+    [?2004l
+    $6 = [34m0xbfc0bfc[m
+    [?2004h(gdb) p[Kp/a $w21
+    [?2004l
+    $7 = [34m0xaa80aa8[m
+    [?2004h(gdb) p/a $w22
+    [?2004l
+    $8 = [34m0x1540154[m
+[?2004h(gdb) c
+[?2004l
+Continuing.
+
+Breakpoint 3, [34m0x00000000004006f0[m in [33mstep_3[m ()
+[?2004h[?2004l
+    [?2004h(gdb) p/a $w20
+    [?2004l
+    $9 = [34m0xef30ef3[m
+    [?2004h(gdb) p/a $2w[K[Kw21
+    [?2004l
+    $10 = [34m0xcc00cc0[m
+    [?2004h(gdb) p/a $w22
+    [?2004l
+    $11 = [34m0x2330233[m
+[?2004h(gdb) c
+[?2004l
+Continuing.
+
+Breakpoint 4, [34m0x0000000000400704[m in [33mstep_4[m ()
+[?2004h[?2004l
+    [?2004h(gdb) p/a $w20
+    [?2004l
+    $12 = [34m0xe03fe03f[m
+    [?2004h(gdb) p/a $w21
+    [?2004l
+    $13 = [34m0xe030e030[m
+    [?2004h(gdb) p/a $w22
+    [?2004l
+    $14 = [34m0xf000f[m
+    [?2004h(gdb) p/a $w23
+    [?2004l
+    $15 = [34m0xfffffffff278[m
+    [?2004h(gdb) p/a $w24
+    [?2004l
+    $16 = [34m0xfffff7ffdb08[m <[33m_rtld_local_ro[m>
+[?2004h(gdb) c
+[?2004l
+Continuing.
+original: 0x07FC07FC reversed: 0x3FE03FE0
+
+Breakpoint 5, [33m__GI_exit[m ([36mstatus[m=0) at [32mexit.c[m:143
+143	  [01m__run_exit_handlers[m [31m([mstatus[31m,[m [31m&[m__exit_funcs[31m,[m true[31m,[m true[31m);[m
+[?2004h[?2004l
+    [?2004h(gdb) p/a $w20
+    [?2004l
+    $17 = [34m0x3fe03fe0[m
+    [?2004h(gdb) p/a $21[K[Kw21
+    [?2004l
+    $18 = [34m0x3f000000[m
+    [?2004h(gdb) p/a $w22
+    [?2004l
+    $19 = [34m0xe00000[m
+    [?2004h(gdb) p/a $w23
+    [?2004l
+    $20 = [34m0x3f00[m
+    [?2004h(gdb) p/a $w24[K4
+    [?2004l
+    $21 = [34m0xe0[m
+    [?2004h(gdb) p/t $w19
+    [?2004l
+    $22 = 111111111000000011111111100
+    [?2004h(gdb) p/t $w20
+    [?2004l
+    $23 = 111111111000000011111111100000
+[?2004h(gdb) exit
+[?2004l
+[?2004hA debugging session is active.
+
+	Inferior 1 [process 2974938] will be killed.
+
+Quit anyway? (y or n) e[Ky
+[?2004l
+]0;shaheryar.syed@csa1:~/Documents/Assignment2 [?2004hshaheryar.syed@csa1:~/Documents/Assignment2$ exit
+[?2004l
+exit
+
+Script done on 2022-10-06 22:42:02-06:00 [COMMAND_EXIT_CODE="0"]
