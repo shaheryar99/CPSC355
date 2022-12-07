@@ -1,0 +1,97 @@
+Script started on 2022-11-26 02:24:11-07:00 [TERM="xterm-256color" TTY="/dev/pts/7" COLUMNS="80" LINES="24"]
+]0;shaheryar.syed@csa2:~/Documents/Assignment5/test [?2004hshaheryar.syed@csa2:~/Documents/Assignment5/test$ ./filename.out
+[?2004l
+[H[2J[3J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 3
+
+Empty queue
+
+Press the return key to continue . . . 2
+[H[2J[3J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 2
+
+Queue underflow! Cannot dequeue from an empty queue.
+
+Press the return key to continue . . . 
+[H[2J[3J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be enqueued: 100
+
+Press the return key to continue . . . 
+[H[2J[3J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 2
+
+Dequeued value is 100
+
+Press the return key to continue . . . 
+[H[2J[3J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be enqueued: 100
+
+Press the return key to continue . . . 
+[H[2J[3J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 3
+
+Current queue contents:
+  100 <-- head of queue <-- tail of queue
+
+Press the return key to continue . . . 
+[H[2J[3J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be enqueued: 200
+
+Press the return key to continue . . . 
+[H[2J[3J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 3
+
+Current queue contents:
+  100 <-- head of queue
+  0
+
+Press the return key to continue . . . 2
+[H[2J[3J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 2
+
+Dequeued value is 100
+
+Press the return key to continue . . . 
+[H[2J[3J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 2
+
+Dequeued value is 200
+
+Press the return key to continue . . . 
+[H[2J[3J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? e 4
+
+Terminating program
+]0;shaheryar.syed@csa2:~/Documents/Assignment5/test [?2004hshaheryar.syed@csa2:~/Documents/Assignment5/test$ exit
+[?2004l
+exit
+
+Script done on 2022-11-26 02:24:41-07:00 [COMMAND_EXIT_CODE="0"]
