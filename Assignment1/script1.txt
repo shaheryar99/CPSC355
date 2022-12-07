@@ -1,0 +1,129 @@
+Script started on 2022-09-26 23:54:20-06:00 [TERM="xterm-256color" TTY="/dev/pts/22" COLUMNS="80" LINES="24"]
+]0;shaheryar.syed@csa2:~/Documents [?2004hshaheryar.syed@csa2:~/Documents$ gdb assign1a
+[?2004l
+[35;1mGNU gdb (GDB) Fedora 12.1-1.fc36[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32massign1a[m...
+[?2004h
+This GDB supports auto-downloading debuginfo from the following URLs:
+https://debuginfod.fedoraproject.org/ 
+Enable debuginfod for this session? (y or [n]) y
+[?2004l
+Debuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+(No debugging symbols found in [32massign1a[m)
+	[?2004h(gdb) disl[Kplay /i $pc
+[?2004l
+1: x/i $pc
+[2m<error: [m[2mNo registers.[m[2m>[m
+	[?2004h(gdb) b *loop
+[?2004l
+Breakpoint 1 at [34m0x4006e8[m
+	[?2004h(gdb) r
+[?2004l
+Starting program: [32m/home/ugc/shaheryar.syed/Documents/assign1a[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib64/libthread_db.so.1[m".
+
+Breakpoint 1, [34m0x00000000004006e8[m in [33mloop[m ()
+1: x/i $pc
+=> [34m0x4006e8[m <[33mloop[m>:	mul	x20, x19, x19
+[?2004h[?2004l
+	[?2004h(gdb) ni
+[?2004l
+[34m0x00000000004006ec[m in [33mloop[m ()
+1: x/i $pc
+=> [34m0x4006ec[m <[33mloop[m+4>:	mov	x22, #0x12d                 	// #301
+[?2004h[?2004l
+	[?2004h(gdb) p $x19
+[?2004l
+$1 = -10
+	[?2004h(gdb) p $x24
+[?2004l
+$2 = 281474842483464
+	[?2004h(gdb) p $x25
+[?2004l
+$3 = -10563
+	[?2004h(gdb) c
+[?2004l
+Continuing.
+Domain (x): -10, Range (y): -10563, Current y maximum: -10563
+
+Breakpoint 1, [34m0x00000000004006e8[m in [33mloop[m ()
+1: x/i $pc
+=> [34m0x4006e8[m <[33mloop[m>:	mul	x20, x19, x19
+[?2004h[?2004l
+	[?2004h(gdb) p [K[Kni
+[?2004l
+[34m0x00000000004006ec[m in [33mloop[m ()
+1: x/i $pc
+=> [34m0x4006ec[m <[33mloop[m+4>:	mov	x22, #0x12d                 	// #301
+[?2004h[?2004l
+	[?2004h(gdb) p $x19
+[?2004l
+$4 = -9
+	[?2004h(gdb) p $x24
+[?2004l
+$5 = -10563
+	[?2004h(gdb) p $x25
+[?2004l
+$6 = -10563
+	[?2004h(gdb) c
+[?2004l
+Continuing.
+Domain (x): -9, Range (y): -2470, Current y maximum: -2470
+
+Breakpoint 1, [34m0x00000000004006e8[m in [33mloop[m ()
+1: x/i $pc
+=> [34m0x4006e8[m <[33mloop[m>:	mul	x20, x19, x19
+[?2004h[?2004l
+	[?2004h(gdb) c
+[?2004l
+Continuing.
+Domain (x): -8, Range (y): 2329, Current y maximum: 2329
+
+Breakpoint 1, [34m0x00000000004006e8[m in [33mloop[m ()
+1: x/i $pc
+=> [34m0x4006e8[m <[33mloop[m>:	mul	x20, x19, x19
+[?2004h[?2004l
+	[?2004h(gdb) p $x19[K[K[K[K[K[Kni
+[?2004l
+[34m0x00000000004006ec[m in [33mloop[m ()
+1: x/i $pc
+=> [34m0x4006ec[m <[33mloop[m+4>:	mov	x22, #0x12d                 	// #301
+[?2004h[?2004l
+	[?2004h(gdb) p $x21[K[K19
+[?2004l
+$7 = -7
+	[?2004h(gdb) p $x22[K24[K[K4
+[?2004l
+$8 = 2329
+	[?2004h(gdb) p $x25
+[?2004l
+$9 = 2329
+	[?2004h(gdb) exit
+[?2004l
+[?2004hA debugging session is active.
+
+	Inferior 1 [process 2121894] will be killed.
+
+Quit anyway? (y or n) ex[K[Ky
+[?2004l
+]0;shaheryar.syed@csa2:~/Documents [?2004hshaheryar.syed@csa2:~/Documents$ exit
+[?2004l
+exit
+
+Script done on 2022-09-26 23:56:24-06:00 [COMMAND_EXIT_CODE="0"]
