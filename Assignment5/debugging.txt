@@ -1,0 +1,77 @@
+./a5b 01 12 
+./a5b 03 01 
+./a5b 07 22 
+./a5b 11 23 
+
+
+
+./a5b 05 01 
+./a5b 01 02
+./a5b 03 03
+./a5b 11 04
+./a5b 02 06
+./a5b 02 08
+./a5b 04 09
+./a5b 06 11
+./a5b 07 12
+./a5b 08 14
+./a5b 09 16
+./a5b 10 18
+./a5b 11 20
+./a5b 12 24
+./a5b 01 26
+./a5b 03 28
+./a5b 05 30
+./a5b 08 31
+
+Jan 2st -> nd
+March 3st -> rd
+November 4st -> th
+February 6, 8st -> th
+April 9st -> th
+
+
+(th)
+(st)
+(nd)
+(rd)
+
+Start: th, st, nd, rd (nd is fine)
+
+
+
+
+
+
+
+
+
+
+110 - 128:
+
+suffix_branch:
+
+	cmp r_day, 11 // Compare day with 11
+	b.lt suffix_main // If less than branch to suffix main
+
+	cmp r_day, 13 // Compare day with 13
+	b.gt suffix_main // If greater than branch to suffix main
+
+	mov r_suffix, 3 // r_suffix = th
+
+suffix_main: 
+
+	mov w26, 10 // Move 10 into w26
+	udiv r_suffix, r_day, w26 // r_suffix = r_day / 10
+
+	cmp r_suffix, 3 // Compare r_suffix with 3
+	b.le season // If less than branch to season
+	mov r_suffix, 2 // r_suffix = th
+	b season // Branch to season
+
+
+188-190:
+
+	adrp r_suffixbase, suffix_double // Base address of suffix
+	add r_suffixbase, r_suffixbase, :lo12:suffix_double // Add to r_suffixbase it's value with suffix and format to 12 bits
+	ldr x3, [r_suffixbase, r_suffix, SXTW 3] // Load third argument

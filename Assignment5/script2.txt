@@ -1,0 +1,15 @@
+Script started on 2022-11-26 00:11:23-07:00 [TERM="xterm-256color" TTY="/dev/pts/7" COLUMNS="80" LINES="24"]
+]0;shaheryar.syed@csa2:~/Documents/Assignment5/part2 [?2004hshaheryar.syed@csa2:~/Documents/Assignment5/part2$ ./a5b 01 32
+[?2004l
+Usage: a5b mm dd
+]0;shaheryar.syed@csa2:~/Documents/Assignment5/part2 [?2004hshaheryar.syed@csa2:~/Documents/Assignment5/part2$ ./a5b 07 03
+[?2004l
+July 3rd is Summer
+]0;shaheryar.syed@csa2:~/Documents/Assignment5/part2 [?2004hshaheryar.syed@csa2:~/Documents/Assignment5/part2$ ./a5b 12 31
+[?2004l
+December 31st is Winter
+]0;shaheryar.syed@csa2:~/Documents/Assignment5/part2 [?2004hshaheryar.syed@csa2:~/Documents/Assignment5/part2$ exit
+[?2004l
+exit
+
+Script done on 2022-11-26 00:11:49-07:00 [COMMAND_EXIT_CODE="24"]
