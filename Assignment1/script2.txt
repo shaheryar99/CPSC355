@@ -1,0 +1,75 @@
+Script started on 2022-09-26 23:27:31-06:00 [TERM="xterm-256color" TTY="/dev/pts/22" COLUMNS="80" LINES="24"]
+]0;shaheryar.syed@csa2:~/Documents [?2004hshaheryar.syed@csa2:~/Documents$ gdb assign1b
+[?2004l
+[35;1mGNU gdb (GDB) Fedora 12.1-1.fc36[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32massign1b[m...
+[?2004h
+This GDB supports auto-downloading debuginfo from the following URLs:
+https://debuginfod.fedoraproject.org/ 
+Enable debuginfod for this session? (y or [n]) y
+[?2004l
+Debuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+(No debugging symbols found in [32massign1b[m)
+	[?2004h(gdb) b *exit
+[?2004l
+Breakpoint 1 at [34m0x40073c[m
+	[?2004h(gdb) r
+[?2004l
+Starting program: [32m/home/ugc/shaheryar.syed/Documents/assign1b[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib64/libthread_db.so.1[m".
+Domain (x): -10, Range (y): -10563, Current y maximum: -10563
+Domain (x): -9, Range (y): -2470, Current y maximum: -2470
+Domain (x): -8, Range (y): 2329, Current y maximum: 2329
+Domain (x): -7, Range (y): 4650, Current y maximum: 4650
+Domain (x): -6, Range (y): 5213, Current y maximum: 5213
+Domain (x): -5, Range (y): 4642, Current y maximum: 5213
+Domain (x): -4, Range (y): 3465, Current y maximum: 5213
+Domain (x): -3, Range (y): 2114, Current y maximum: 5213
+Domain (x): -2, Range (y): 925, Current y maximum: 5213
+Domain (x): -1, Range (y): 138, Current y maximum: 5213
+Domain (x): 0, Range (y): -103, Current y maximum: 5213
+Domain (x): 1, Range (y): 250, Current y maximum: 5213
+Domain (x): 2, Range (y): 1149, Current y maximum: 5213
+Domain (x): 3, Range (y): 2450, Current y maximum: 5213
+Domain (x): 4, Range (y): 3913, Current y maximum: 5213
+Domain (x): 5, Range (y): 5202, Current y maximum: 5213
+Domain (x): 6, Range (y): 5885, Current y maximum: 5885
+Domain (x): 7, Range (y): 5434, Current y maximum: 5885
+Domain (x): 8, Range (y): 3225, Current y maximum: 5885
+Domain (x): 9, Range (y): -1462, Current y maximum: 5885
+Domain (x): 10, Range (y): -9443, Current y maximum: 5885
+
+Breakpoint 1, [33m__GI_exit[m ([36mstatus[m=58) at [32mexit.c[m:143
+143	  [01m__run_exit_handlers[m [31m([mstatus[31m,[m [31m&[m__exit_funcs[31m,[m true[31m,[m true[31m);[m
+[?2004h[?2004l
+	[?2004h(gdb) p $x25
+[?2004l
+$1 = 5885
+	[?2004h(gdb) c
+[?2004l
+Continuing.
+[Inferior 1 (process 2114236) exited with code 072]
+[?2004h[?2004l
+	[?2004h(gdb) exit
+[?2004l
+]0;shaheryar.syed@csa2:~/Documents [?2004hshaheryar.syed@csa2:~/Documents$ exit
+[?2004l
+exit
+
+Script done on 2022-09-26 23:28:24-06:00 [COMMAND_EXIT_CODE="0"]
