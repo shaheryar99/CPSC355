@@ -1,0 +1,128 @@
+Script started on 2022-11-04 15:50:06-06:00 [TERM="xterm-256color" TTY="/dev/pts                                                                                                                                                             /51" COLUMNS="80" LINES="24"]
+shaheryar.syed@csa2:~/Documents/Assignment4$ gdb assign4
+GNU gdb (GDB) Fedora 12.1-1.fc36
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign4...
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+https://debuginfod.fedoraproject.org/
+Enable debuginfod for this session? (y or [n]) y
+Debuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+(No debugging symbols found in assign4)
+(gdb) display/i$pc
+1: x/i $pc
+<error: No registers.>
+(gdb) b *gdb0
+Breakpoint 1 at 0x4008b0
+(gdb) b *gdb1
+Breakpoint 2 at 0x4008b8
+(gdb) b* gdb3
+Breakpoint 3 at 0x400900
+(gdb) b *next
+Breakpoint 4 at 0x40090c
+(gdb) r
+Starting program: /home/ugc/shaheryar.syed/Documents/Assignment4/assign4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+
+Breakpoint 1, 0x00000000004008b0 in gdb0 ()
+1: x/i $pc
+=> 0x4008b0 <gdb0>:     add     x8, x29, #0x24
+(gdb) x/6d $fp+cub_1
+'cub_1' has unknown type; cast it to its declared type
+(gdb) x/6d $fp+16
+0xfffffffff0e0: 0       65535   2       2
+0xfffffffff0f0: 3       65535
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004008b8 in gdb1 ()
+1: x/i $pc
+=> 0x4008b8 <gdb1>:     adrp    x0, 0x400000
+(gdb) x/6d $fp+36
+0xfffffffff0f4: 0       -136088416      2       2
+0xfffffffff104: 3       4195764
+(gdb) x/6d $fp+20
+0xfffffffff0e4: 65535   2       2       3
+0xfffffffff0f4: 0       -136088416
+(gdb) c
+Continuing.
+Initial cuboid values:
+Cuboid first origin = (0, 0)
+        Base width = 2 Base length = 2
+        Height = 3
+        Volume = 12
+
+Cuboid second origin = (0, 0)
+        Base width = 2 Base length = 2
+        Height = 3
+        Volume = 12
+
+
+Breakpoint 3, 0x0000000000400900 in gdb3 ()
+1: x/i $pc
+=> 0x400900 <gdb3>:     add     x0, x29, #0x24
+(gdb) x/6d $fp+16
+0xfffffffff0e0: 3       65535   2       2
+0xfffffffff0f0: 3       0
+(gdb) x/6d $fp+36
+0xfffffffff0f4: 0       -136088416      2       2
+0xfffffffff104: 3       4195764
+(gdb) p $w9
+$1 = 3
+(gdb) p $w10
+$2 = 4294967290
+(gdb) c
+Continuing.
+
+Breakpoint 4, 0x000000000040090c in next ()
+1: x/i $pc
+=> 0x40090c <next>:     adrp    x0, 0x400000
+(gdb) x/6d $fp+16
+0xfffffffff0e0: 3       65535   2       2
+0xfffffffff0f0: 3       0
+(gdb) x/6d $fp+36
+0xfffffffff0f4: 0       -136088416      8       8
+0xfffffffff104: 12      4195764
+(gdb) p $w9
+$3 = 8
+(gdb) p $w10
+$4 = 8
+(gdb) p $w11
+$5 = 12
+(gdb) p $w4
+$6 = 768
+(gdb) c
+Continuing.
+
+Changed cuboid values:
+Cuboid first origin = (3, -6)
+        Base width = 2 Base length = 2
+        Height = 3
+        Volume = 12
+
+Cuboid second origin = (0, 0)
+        Base width = 8 Base length = 8
+        Height = 12
+        Volume = 768
+
+[Inferior 1 (process 1685155) exited normally]
+(gdb) exit
+shaheryar.syed@csa2:~/Documents/Assignment4$ exit
+exit
+
+Script done on 2022-11-04 15:54:28-06:00 [COMMAND_EXIT_CODE="0"]
