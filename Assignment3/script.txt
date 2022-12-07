@@ -1,0 +1,168 @@
+Script started on 2022-10-21 01:11:04-06:00 [TERM="xterm-256color" TTY="/dev/pts/14" COLUMNS="80" LINES="24"]
+]0;shaheryar.syed@csa3:~/Documents/Assignment3 [?2004hshaheryar.syed@csa3:~/Documents/Assignment3$ gdb assign3
+[?2004l
+[35;1mGNU gdb (GDB) Fedora 12.1-1.fc36[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32massign3[m...
+[?2004h
+This GDB supports auto-downloading debuginfo from the following URLs:
+https://debuginfod.fedoraproject.org/ 
+Enable debuginfod for this session? (y or [n]) y
+[?2004l
+Debuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+(No debugging symbols found in [32massign3[m)
+	[?2004h(gdb) b *gdb1
+[?2004l
+Breakpoint 1 at [34m0x400740[m
+	[?2004h(gdb) b *gdb2
+[?2004l
+Breakpoint 2 at [34m0x4007e4[m
+	[?2004h(gdb) x/40d $x19
+[?2004l
+No registers.
+	[?2004h(gdb) r
+[?2004l
+Starting program: [32m/home/ugc/shaheryar.syed/Documents/Assignment3/assign3[m 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "[32m/lib64/libthread_db.so.1[m".
+v[0]: 103
+v[1]: 198
+v[2]: 105
+v[3]: 115
+v[4]: 81
+v[5]: 255
+v[6]: 74
+v[7]: 236
+v[8]: 41
+v[9]: 205
+v[10]: 186
+v[11]: 171
+v[12]: 242
+v[13]: 251
+v[14]: 227
+v[15]: 70
+v[16]: 124
+v[17]: 194
+v[18]: 84
+v[19]: 248
+v[20]: 27
+v[21]: 232
+v[22]: 231
+v[23]: 141
+v[24]: 118
+v[25]: 90
+v[26]: 46
+v[27]: 99
+v[28]: 51
+v[29]: 159
+v[30]: 201
+v[31]: 154
+v[32]: 102
+v[33]: 50
+v[34]: 13
+v[35]: 183
+v[36]: 49
+v[37]: 88
+v[38]: 163
+v[39]: 90
+
+Breakpoint 1, [34m0x0000000000400740[m in [33mgdb1[m ()
+[?2004h[?2004l
+	[?2004h(gdb) x/40d $x19
+[?2004l
+[34m0xfffffffff028[m:	103	198	105	115
+[34m0xfffffffff038[m:	81	255	74	236
+[34m0xfffffffff048[m:	41	205	186	171
+[34m0xfffffffff058[m:	242	251	227	70
+[34m0xfffffffff068[m:	124	194	84	248
+[34m0xfffffffff078[m:	27	232	231	141
+[34m0xfffffffff088[m:	118	90	46	99
+[34m0xfffffffff098[m:	51	159	201	154
+[34m0xfffffffff0a8[m:	102	50	13	183
+[34m0xfffffffff0b8[m:	49	88	163	90
+	[?2004h(gdb) c
+[?2004l
+Continuing.
+
+Breakpoint 2, [34m0x00000000004007e4[m in [33mgdb2[m ()
+[?2004h[?2004l
+	[?2004h(gdb) x/40d $x19
+[?2004l
+[34m0xfffffffff028[m:	13	27	41	46
+[34m0xfffffffff038[m:	49	50	51	70
+[34m0xfffffffff048[m:	74	81	84	88
+[34m0xfffffffff058[m:	90	90	99	102
+[34m0xfffffffff068[m:	103	105	115	118
+[34m0xfffffffff078[m:	124	141	154	159
+[34m0xfffffffff088[m:	163	171	183	186
+[34m0xfffffffff098[m:	194	198	201	205
+[34m0xfffffffff0a8[m:	227	231	232	236
+[34m0xfffffffff0b8[m:	242	248	251	255
+	[?2004h(gdb) c
+[?2004l
+Continuing.
+
+Sorted array:
+v[0]: 13
+v[1]: 27
+v[2]: 41
+v[3]: 46
+v[4]: 49
+v[5]: 50
+v[6]: 51
+v[7]: 70
+v[8]: 74
+v[9]: 81
+v[10]: 84
+v[11]: 88
+v[12]: 90
+v[13]: 90
+v[14]: 99
+v[15]: 102
+v[16]: 103
+v[17]: 105
+v[18]: 115
+v[19]: 118
+v[20]: 124
+v[21]: 141
+v[22]: 154
+v[23]: 159
+v[24]: 163
+v[25]: 171
+v[26]: 183
+v[27]: 186
+v[28]: 194
+v[29]: 198
+v[30]: 201
+v[31]: 205
+v[32]: 227
+v[33]: 231
+v[34]: 232
+v[35]: 236
+v[36]: 242
+v[37]: 248
+v[38]: 251
+v[39]: 255
+[Inferior 1 (process 637026) exited normally]
+[?2004h[?2004l
+	[?2004h(gdb) exit
+[?2004l
+	]0;shaheryar.syed@csa3:~/Documents/Assignment3 [?2004hshaheryar.syed@csa3:~/Documents/Assignment3$ exit
+[?2004l
+exit
+
+Script done on 2022-10-21 01:11:49-06:00 [COMMAND_EXIT_CODE="0"]
